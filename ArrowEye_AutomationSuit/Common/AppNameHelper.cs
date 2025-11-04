@@ -17,9 +17,26 @@ namespace ArrowEye_Automation_Framework.Common
             }
         }
 
+        static public string apiToken
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings["ApiDevToken"];
+            }
+        }
+
+        static public string ApiBaseUrl
+        {
+            get
+            {
+                return ConfigurationManager.AppSettings["apiDevUrl"];
+            }
+        }
 
 
 
 
-     }
+
+
+    }
 }
