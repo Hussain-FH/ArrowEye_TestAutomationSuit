@@ -1,2 +1,2 @@
 # ArrowEye_TestAutomationSuit
-Arrow eye test automation suit
+Arrow eye test automation suite

@@ -5,3 +5,7 @@
 /.vs
 /ArrowEye_ClientPortal_Automation/.vs
 /ArrowEye_AutomationSuit/.vs
+/ArrowEye_AutomationSuit/bin/Debug
+/ArrowEye_AutomationSuit/obj/Debug
+/ArrowEye_Automation_Portal/bin/Debug
+/ArrowEye_Automation_Portal/obj/Debug
