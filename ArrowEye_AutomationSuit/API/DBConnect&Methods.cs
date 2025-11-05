@@ -10,7 +10,8 @@ namespace ArrowEye_Automation_Framework.API
 {
       class DBConnect_Methods
     {
-        static string connectionString = "Host=asxtwebdbc-dev.ckmkjhucjkjr.us-west-2.rds.amazonaws.com;Username=postgres;Password=PortalDev2024!;Database=4YSClientPortalServer;sslmode=Require;Trust Server Certificate=true";
+        //static string connectionString = "Host=asxtwebdbc-dev1.ckmkjhucjkjr.us-west-2.rds.amazonaws.com;Username=postgres;Password=PortalDev2024!;Database=4YSClientPortalServer;sslmode=Require;Trust Server Certificate=true";
+        static string connectionString = "Host=asxtwebdbc-dev1.ckmkjhucjkjr.us-west-2.rds.amazonaws.com;Username=postgres;Password=PortalDev2024!;Database=QA1_4YSClientPortalServer;sslmode=Require;Trust Server Certificate=true";
 
         static public ArrayList SelectMethod(String Sql)
         {

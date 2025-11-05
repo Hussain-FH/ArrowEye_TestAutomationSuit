@@ -210,8 +210,10 @@
   </Choose>
   <ItemGroup>
     <Compile Include="API\APICommonMethods.cs" />
+    <Compile Include="API\API_Client Settings.cs" />
     <Compile Include="API\API_CSPSettings.cs" />
     <Compile Include="API\API_EMVTests.cs" />
+    <Compile Include="API\API_Product.cs" />
     <Compile Include="API\DBConnect&amp;Methods.cs" />
     <Compile Include="API\Sample.cs" />
     <Compile Include="API\APICommon.cs" />
