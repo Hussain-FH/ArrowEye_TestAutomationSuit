@@ -5,3 +5,8 @@
 /.vs
 /ArrowEye_ClientPortal_Automation/.vs
 /ArrowEye_AutomationSuit/.vs
+/ArrowEye_AutomationSuit/obj/Debug/ArrowEye_Automation_Framework.csproj.AssemblyReference.cache
+*.htm
+/ArrowEye_Automation_Portal/obj/Debug/ArrowEye_Automation_Portal.csproj.AssemblyReference.cache
+*.force
+/ArrowEye_Automation_Portal/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
