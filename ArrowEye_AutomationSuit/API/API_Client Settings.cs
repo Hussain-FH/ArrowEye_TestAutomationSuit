@@ -1300,6 +1300,24 @@ namespace ArrowEye_Automation_Framework.API
             Assert.That(ErrorMsg, Is.EqualTo("Zip can accept 10 characters or fewer. You entered 11 characters."));
             Assert.That((int)response.StatusCode, Is.EqualTo(400));
         }
+
+        //TEst method
+        [Test]
+        [Description("ClientSetting clientProfiles Put ZIP more10Char")]
+        [Category("Smoke")]
+        [TestCase("Automation_ClientProfile_Put_Zip_More10Char")]
+        public void ClientSetting_DummyTestMethod(string APItoken)
+        {
+            string randomString = RandomString.GetString(Types.ALPHANUMERIC_MIXEDCASE, 15);
+            string Jsonbody = "{\"contactId\":1,\"name\": \"apitest\",\"title\": \"apitesting\",\"email\": \"api@gmail.com\",\"officeNo\": \"12345678\", \"mobileNo\": \"123456789\",\"otherNo\": \"12345678910\",\"note\": \"apitest\",\"addressesList\": [ {\"street1\": \"apitesting\",\"street2\": \"street2\",\"city\": \"apitesting\",\"state\": \"mh\",\"zip\": \"12345678910\",\"countryId\": 21}], \"pclId\": 100}";
+            var response = APICommonMethods.ResponseFromPutRequest(AppNameHelper.ApiBaseUrl, "/generalsettings/contactinfo", Jsonbody);
+            Console.WriteLine(response.Content);
+            dynamic jsonResponse = JObject.Parse(response.Content);
+            Console.WriteLine(jsonResponse);
+            String ErrorMsg = jsonResponse.errors["AddressesList[0].Zip"][0];
+            Assert.That(ErrorMsg, Is.EqualTo("Zip can accept 10 characters or fewer. You entered 11 characters."));
+            Assert.That((int)response.StatusCode, Is.EqualTo(400));
+        }
     }
 }
 
