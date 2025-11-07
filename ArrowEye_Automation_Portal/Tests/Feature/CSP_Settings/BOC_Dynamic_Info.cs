@@ -6,20 +6,20 @@ using RandomString4Net;
 namespace ArrowEye_Automation_Portal.Tests.Feature.CSP_Settings
 {
     [TestFixture]
-    public class BOC_Dynamic_Info :TestBase
+    public class BOC_Dynamic_Info : TestBase
     {
-        string randomString = RandomString.GetString(Types.ALPHANUMERIC_LOWERCASE,10);
-       
+        string randomString = RandomString.GetString(Types.ALPHANUMERIC_LOWERCASE, 10);
+
         [Test]
         [Description("BOC_Dynamic_Info_Create")]
         [Category("Smoke")]
-        [TestCase("Automation_Create_BocDynamic_Info_")]
+        [TestCase("Automation_Create_Info")]
         public void Create_New_BOC_Dynamic_Info(string CreateBOCDynamicText)
         {
             CP_Pages.Login.LogIn("shaikhussainpasha", "Shaik@12345");
-            CP_Pages.Home.ValidateHomePageTitle();
-            CP_Pages.Home.NavigateToCSPSettings();
-            CP_Pages.BOCDynamicInfoPage.AddNewBOCDynamicInfo(CreateBOCDynamicText+ randomString);
+            CP_Pages.Home.ValidateHomePageTitle();            
+            CP_Pages.Home.NavigateToCSPSettingsSubMenu("BOC Dynamic Info");
+            CP_Pages.BOCDynamicInfoPage.AddNewBOCDynamicInfo(CreateBOCDynamicText + randomString);
             DriverUtilities.TakeScreenshot(@"C:\");
         }
 
@@ -31,11 +31,10 @@ namespace ArrowEye_Automation_Portal.Tests.Feature.CSP_Settings
         {
             CP_Pages.Login.LogIn("shaikhussainpasha", "Shaik@12345");
             CP_Pages.Home.ValidateHomePageTitle();
-            CP_Pages.Home.NavigateToCSPSettings();
+            CP_Pages.Home.NavigateToCSPSettingsSubMenu("BOC Dynamic Info");
             CP_Pages.BOCDynamicInfoPage.EditBOCDynamicInfo(UpdateBOCDynamicText + randomString);
             DriverUtilities.TakeScreenshot(@"C:\");
         }
-
 
         [Test]
         [Description("BOC_Dynamic_Info_Delete")]
@@ -45,7 +44,7 @@ namespace ArrowEye_Automation_Portal.Tests.Feature.CSP_Settings
         {
             CP_Pages.Login.LogIn("shaikhussainpasha", "Shaik@12345");
             CP_Pages.Home.ValidateHomePageTitle();
-            CP_Pages.Home.NavigateToCSPSettings();
+            CP_Pages.Home.NavigateToCSPSettingsSubMenu("BOC Dynamic Info");
             CP_Pages.BOCDynamicInfoPage.DeleteBOCDynamicInfo(DeleteBOCDynamicText + randomString);
             DriverUtilities.TakeScreenshot(@"C:\");
         }
@@ -58,7 +57,7 @@ namespace ArrowEye_Automation_Portal.Tests.Feature.CSP_Settings
         {
             CP_Pages.Login.LogIn("shaikhussainpasha", "Shaik@12345");
             CP_Pages.Home.ValidateHomePageTitle();
-            CP_Pages.Home.NavigateToCSPSettings();
+            CP_Pages.Home.NavigateToCSPSettingsSubMenu("BOC Dynamic Info");
             CP_Pages.BOCDynamicInfoPage.ViewandSearchBOCDynamicInfo(ViewSearchBOCDynamicText + randomString);
             DriverUtilities.TakeScreenshot(@"C:\");
         }

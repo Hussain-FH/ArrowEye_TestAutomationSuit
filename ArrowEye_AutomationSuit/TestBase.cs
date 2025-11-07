@@ -1,6 +1,8 @@
 ﻿using ArrowEye_Automation_Framework.Common;
 using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
 using System;
 
 namespace ArrowEye_Automation_Framework
@@ -13,12 +15,13 @@ namespace ArrowEye_Automation_Framework
         [SetUp]
         public void TestSetup()
         {
-           Browser.Initialize();
+            Browser.Initialize();
         }
 
         [TearDown]
         public void TestTearDown()
         {
+           
             Browser.Close();
         }
 
@@ -47,5 +50,6 @@ namespace ArrowEye_Automation_Framework
             return result;
         }
 
+       
     }
 }
